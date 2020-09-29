@@ -3,10 +3,11 @@
 
  class  Avatar{
 
-    public $avatar = [];
+    public $avatar;
      
      /* $size = nombre de cases du tableau  $colors = les couleurs voulues par l'utilisateur*/
-    public function construct__(int $size, array $colors){
+    public function __construct(int $size, array $colors){
+        $avatar= [];
         $midle= ($size/2);
 
             for ($x= 0; $x< $size ; $x++) {
@@ -23,7 +24,7 @@
                     }
                 }
             }
-    return $avatar;
+     $this->avatar =$avatar;
     }
 
     public function display() {
